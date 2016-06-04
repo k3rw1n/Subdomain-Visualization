@@ -30,7 +30,7 @@ def main():
         G.add_edge(i, j)
         domainset.append(j)
 
-    domainset= list(set(domainset))
+    domainset = list(set(domainset))
     lens = 20
     for i in domainset:
         if len(i) < lens:
@@ -38,10 +38,10 @@ def main():
             mark = i
         else:
             pass
+    domainset.remove(mark)
     
     for i in domainset:
-        if mark != i:
-            G.add_edge(mark,i)
+        G.add_edge(mark,i)
 
 
     nx.draw_networkx(G, node_size=100,node_color='b')
