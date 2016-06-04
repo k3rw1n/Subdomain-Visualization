@@ -46,10 +46,10 @@ def main():
 
     results = ""
     for i,ip in enumerate(iplist):
-        results = results + nodec(i+1, ip)
+        results += nodec(i+1, ip)
     counts = i
     for _ in range(15):
-        results = results + edgec(random.randint(1,counts), random.randint(1,counts))
+        results += edgec(random.randint(1,counts), random.randint(1,counts))
     print graphc(results)
 
     f = open('wzj.gml','w')
